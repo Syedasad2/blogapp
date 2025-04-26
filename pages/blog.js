@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
+import * as fs from "fs";
 const Blog = (props) => {
   const [blogs, setBlogs] = useState(props.allBlogs);
   // useEffect(() => {
@@ -12,7 +13,8 @@ const Blog = (props) => {
   //       setBlogs(parsed);
   //     });
   // }, []);
-  return<div>
+  return (
+    <div>
       <main className="flex flex-col gap-8 row-start-2 items-center pb-40 pt-10 justify-items-center">
         {blogs.map((blogitem) => {
           return (
@@ -21,20 +23,27 @@ const Blog = (props) => {
                 <h3>{blogitem.title}</h3>
               </Link>
               <p className={styles.blogItemp}>
-                {blogitem.content.substr(0, 150)}
+                {blogitem.metadesc.substr(0, 150)}
               </p>
             </div>
           );
         })}
       </main>
     </div>
+  );
 };
-export async function getServerSideProps(context) {
-  let data = await fetch("http://localhost:3000/api/blogs")
-  let allBlogs = await data.json()
-  return{
-    props:{allBlogs},
+export async function getStaticProps(context) {
+  let data = await fs.promises.readdir("blogdata");
+  let myfile;
+  let allBlogs = [];
+  for (let index = 0; index < data.length; index++) {
+    const item = data[index];
+    myfile = await fs.promises.readFile("blogdata/" + item, "utf-8");
+    allBlogs.push(JSON.parse(myfile));
   }
+  return {
+    props: { allBlogs },
+  };
 }
 
 export default Blog;

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -24,13 +23,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start pb-40 pt-10">
         <h1 className={"font-bold"}>Hunting Coders</h1>
         <div className={styles.imagewrap}>
-          <Image
-            src="/home.jpeg"
-            alt="homeimage"
-            className={styles.myImg}
-            width={275}
-            height={183}
-          />
+          <img src="/home.jpeg"  alt="homeimage"   className={styles.myImg}  width={275} height={183}/>
         </div>
 
         <p className={"font-mono"}>blog app for coders</p>
