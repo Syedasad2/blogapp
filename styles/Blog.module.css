@@ -1,7 +1,36 @@
-/* .blogItem h1{
+.blogItem {
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  }
+  
+  .blogItem:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .blogItem h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a202c;
     cursor: pointer;
-} */
-
-.blogItemp{
-    max-width: 45vw;
-}
+    transition: color 0.3s ease;
+  }
+  
+  .blogItem h3:hover {
+    color: #3182ce;
+  }
+  
+  .blogItemp {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  

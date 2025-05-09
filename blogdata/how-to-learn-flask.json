@@ -1,7 +1,7 @@
 {
-  "title": "How to learn flask",
-  "content": "JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[11] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).",
+  "title": "How to Learn Flask",
+  "content": "Flask is a lightweight and beginner-friendly web framework for Python. It is known for its simplicity and flexibility, making it a great choice for small to medium-sized web applications. Flask follows a minimalistic approach, allowing developers to add extensions as needed. It provides tools for routing, templates, request handling, and more. With its easy learning curve, Flask is an ideal framework for Python developers looking to get started with web development.",
   "author": "Asad Shah",
-  "metadesc":"how-to-learn-flask",
+  "metadesc": "how-to-learn-flask",
   "slug": "how-to-learn-flask"
 }
