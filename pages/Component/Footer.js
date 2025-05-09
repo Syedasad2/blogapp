@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -12,10 +13,10 @@ const Footer = () => {
 
           {/* Links Section */}
           <div className="space-y-4 sm:space-y-0 sm:flex sm:space-x-8 text-center sm:text-left">
-            <a href="#" className="text-gray-400 hover:text-white transition duration-300">Home</a>
-            <a href="/about" className="text-gray-400 hover:text-white transition duration-300">About</a>
-            <a href="/blog" className="text-gray-400 hover:text-white transition duration-300">Blog</a>
-            <a href="/contact" className="text-gray-400 hover:text-white transition duration-300">Contact</a>
+            <Link href="#" className="text-gray-400 hover:text-white transition duration-300">Home</Link>
+            <Link href="/about" className="text-gray-400 hover:text-white transition duration-300">About</Link>
+            <Link href="/blog" className="text-gray-400 hover:text-white transition duration-300">Blog</Link>
+            <Link href="/contact" className="text-gray-400 hover:text-white transition duration-300">Contact</Link>
           </div>
         </div>
 
