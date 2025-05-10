@@ -36,7 +36,7 @@ export default function Home() {
         <p className="font-mono text-lg text-center text-gray-600">A clean and modern blog app for developers.</p>
 
         <div className="font-mono w-full max-w-2xl mt-8">
-          <h2 className="text-gray-800 mb-6">🔥 Popular Blogs:</h2>
+          <h2 className="text-gray-800 mb-6">Popular Blogs:</h2>
 
           {/* Blog Cards */}
           <div className="space-y-6">
