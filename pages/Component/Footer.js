@@ -6,7 +6,6 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-6 sm:gap-0">
-          {/* Brand Section */}
           <div className="text-2xl font-bold mb-6 sm:mb-0 text-center sm:text-left">
             Hunting Coders
           </div>
