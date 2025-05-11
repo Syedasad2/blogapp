@@ -1,36 +1,65 @@
 .blogItem {
-    padding: 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
-  }
-  
-  .blogItem:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  }
-  
-  .blogItem h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #1a202c;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .blogItem h3:hover {
-    color: #3182ce;
-  }
-  
-  .blogItemp {
-    font-size: 16px;
-    color: #4a5568;
-    line-height: 1.6;
-  }
-  
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.blogItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blogItem h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.blogItemp {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.blogItem button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.blogItem button:hover {
+  background-color: #2d3748;
+  transform: scale(1.05);
+}
+
+.blogTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.loader {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #4a5568;
+}
+
+.endMessage {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #4a5568;
+}

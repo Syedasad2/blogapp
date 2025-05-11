@@ -1,73 +1,124 @@
 .container {
-    max-width: 45vw;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #f7f7f7;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 45vw;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bolder;
+}
+
+.mb3 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
+}
+
+.mb3 label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: rgb(3, 62, 64);
+}
+
+.textarea {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  resize: vertical;
+}
+
+.textarea:focus {
+  border-color: rgb(3, 62, 64);
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: rgb(3, 62, 64);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: rgb(5, 80, 83);
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 70vw;
+    padding: 25px;
   }
-  
-  .heading {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 85vw;
+    padding: 20px;
   }
-  
-  .mb3 {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 21px;
-  }
-  
-  .mb3 label {
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .input {
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
-    width: 100%;
-  }
-  
-  .input:focus {
-    border-color: rgb(3, 62, 64);
-  }
-  
+
+  .input,
   .textarea {
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
-    width: 100%;
-    resize: vertical;
+    font-size: 15px;
+    padding: 9px 14px;
   }
-  
-  .textarea:focus {
-    border-color: rgb(3, 62, 64);
-  }
-  
+
   .button {
-    padding: 12px 24px;
-    background-color: rgb(3, 62, 64);
-    border: none;
-    border-radius: 6px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 0 auto;
+    font-size: 15px;
+    padding: 11px 22px;
   }
-  
-  .button:hover {
-    background-color: rgb(5, 80, 83);
+
+  .heading {
+    font-size: 24px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 95vw;
+    padding: 16px;
+  }
+
+  .input,
+  .textarea {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+}

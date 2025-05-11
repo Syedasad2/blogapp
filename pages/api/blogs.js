@@ -1,10 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { log } from 'console';
+// import { log } from 'console';
 import * as fs from 'fs';
 
 export default async function handler(req, res) {
 
   let data = await fs.promises.readdir("blogdata")
+  data = data.slice(0, parseInt(req.query.count));
   let myfile;
   let allBlogs = [];
   for (let index = 0; index < data.length; index++) {
