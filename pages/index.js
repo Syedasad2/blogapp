@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,10 +9,12 @@ export default function Home() {
         {/* Hero Section */}
         <div className="flex justify-center w-full">
           <div className="relative w-full max-w-md lg:max-w-2xl">
-            <img
+            <Image
               src="/home.jpg"
               alt="homeimage"
-              className={styles.heroImage}
+              width={800}
+              height={350}
+              className="rounded-xl shadow-xl object-cover"
             />
           </div>
         </div>
@@ -30,7 +33,7 @@ export default function Home() {
             Explore the world of web development!
           </h2>
           <p className={styles.introductionText}>
-            At Hunting Coders, we dive deep into modern web technologies like JavaScript, React, Node.js, and more. Whether you're a beginner or an experienced developer, you'll find content tailored to help you grow your skills.
+            At Hunting Coders, we dive deep into modern web technologies like JavaScript, React, Node.js, and more. Whether you're a beginner or an experienced developer, <p>You&apos;ll find content tailored to help you grow your skills.</p>
           </p>
 
           <Link href="/blog">
