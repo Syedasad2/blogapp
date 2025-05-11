@@ -33,7 +33,7 @@ export default function Home() {
             Explore the world of web development!
           </h2>
           <p className={styles.introductionText}>
-            At Hunting Coders, we dive deep into modern web technologies like JavaScript, React, Node.js, and more. Whether you're a beginner or an experienced developer, <p>You&apos;ll find content tailored to help you grow your skills.</p>
+            At Hunting Coders, we dive deep into modern web technologies like JavaScript, React, Node.js, and more.  Whether you&apos;re a beginner or an experienced developer, you&apos;ll find content tailored to help you grow your skills.
           </p>
 
           <Link href="/blog">
