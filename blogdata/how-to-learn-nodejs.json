@@ -1,7 +1,0 @@
-{
-  "title": "How to Learn NodeJs",
-  "content": "Node.js is a powerful, open-source, cross-platform JavaScript runtime environment that runs on the server side. It uses the V8 engine developed by Google to execute JavaScript code outside of a web browser. With Node.js, developers can build scalable, high-performance network applications using JavaScript. It’s especially popular for creating APIs, real-time applications like chat apps, and backend services. To start learning Node.js, begin by understanding its asynchronous nature, the event loop, and core modules like fs, http, and path. Then explore popular frameworks like Express.js to build robust server-side applications quickly.",
-  "author": "Asad Shah",
-  "metadesc": "how-to-learn-nodejs",
-  "slug": "how-to-learn-nodejs"
-}

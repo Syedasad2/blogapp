@@ -1,7 +1,0 @@
-{
-  "title": "How to Learn CSS",
-  "content": "CSS (Cascading Style Sheets) is a fundamental technology for designing and styling web pages. To start learning CSS, begin with basic concepts like selectors, properties, and values. Understand how to style text, backgrounds, borders, and layouts. As you progress, explore advanced topics such as Flexbox, Grid, animations, transitions, and responsive design techniques. Practice by creating small web page layouts and replicating simple website designs. Using resources like MDN Web Docs, freeCodeCamp, and CSS-Tricks can help you build a solid understanding of CSS and how it works with HTML to create visually appealing websites.",
-  "author": "Asad Shah",
-  "metadesc": "how-to-learn-css",
-  "slug": "how-to-learn-css"
-}
