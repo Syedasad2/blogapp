@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen bg-gray-50">
+    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen">
       <main className="flex flex-col gap-8 row-start-2 items-center w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-20">
         {/* Hero Section */}
         <div className="flex justify-center w-full">
