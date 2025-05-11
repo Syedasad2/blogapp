@@ -1,0 +1,7 @@
+{
+  "title": "How to Learn Flask",
+  "content": "Flask is a lightweight and beginner-friendly web framework for Python. It is known for its simplicity and flexibility, making it a great choice for small to medium-sized web applications. Flask follows a minimalistic approach, allowing developers to add extensions as needed. It provides tools for routing, templates, request handling, and more. With its easy learning curve, Flask is an ideal framework for Python developers looking to get started with web development.",
+  "author": "Asad Shah",
+  "metadesc": "how-to-learn-flask",
+  "slug": "how-to-learn-flask"
+}
