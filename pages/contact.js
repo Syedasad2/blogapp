@@ -10,7 +10,7 @@ const Contact = () => {
     e.preventDefault();
     console.log(name, email, phone, desc);
     const data = { phone, name, email, desc };
-    fetch("http://localhost:3000/api/postcontact", {
+    fetch("/api/postcontact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
