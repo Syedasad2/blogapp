@@ -6,10 +6,15 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [desc, setDesc] = useState("");
+  const [submitted, setSubmitted] = useState(false); 
+  const [loading, setLoading] = useState(false); 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, phone, desc);
     const data = { phone, name, email, desc };
+
+    setLoading(true);
+
     fetch("/api/postcontact", {
       method: "POST",
       headers: {
@@ -19,88 +24,98 @@ const Contact = () => {
     })
       .then((response) => response.text())
       .then((data) => {
-        console.log("Success", data);
-        alert("Thanks for reaching Us");
+        setSubmitted(true); 
+        setLoading(false); 
         setPhone("");
         setEmail("");
         setDesc("");
         setName("");
       })
       .catch((error) => {
-        console.log(error, "Erros");
+        setLoading(false); 
       });
   };
+
   const handleChange = (e) => {
-    if (e.target.name == "phone") {
+    if (e.target.name === "phone") {
       setPhone(e.target.value);
-    } else if (e.target.name == "name") {
+    } else if (e.target.name === "name") {
       setName(e.target.value);
-    } else if (e.target.name == "email") {
+    } else if (e.target.name === "email") {
       setEmail(e.target.value);
-    } else if (e.target.name == "desc") {
+    } else if (e.target.name === "desc") {
       setDesc(e.target.value);
     }
   };
 
   return (
     <div className={styles.container}>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <div className={styles.mb3}>
-          <label htmlFor="name">Enter your name</label>
-          <input
-            type="text"
-            className={styles.input}
-            id="name"
-            name="name"
-            value={name}
-            onChange={handleChange}
-            aria-describedby="nameHelp"
-          />
+      {submitted ? (
+        <div className="text-center">
+          <h1>Thanks for reaching us!</h1>
+          <p>We will get back to you shortly.</p>
         </div>
+      ) : (
+        <>
+          <h1>Contact Us</h1>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.mb3}>
+              <label htmlFor="name">Enter your name</label>
+              <input
+                type="text"
+                className={styles.input}
+                id="name"
+                name="name"
+                value={name}
+                onChange={handleChange}
+                aria-describedby="nameHelp"
+              />
+            </div>
 
-        <div className={styles.mb3}>
-          <label htmlFor="email">Email address</label>
-          <input
-            type="email"
-            className={styles.input}
-            id="email"
-            name="email"
-            aria-describedby="emailHelp"
-            value={email}
-            onChange={handleChange}
-          />
-        </div>
+            <div className={styles.mb3}>
+              <label htmlFor="email">Email address</label>
+              <input
+                type="email"
+                className={styles.input}
+                id="email"
+                name="email"
+                aria-describedby="emailHelp"
+                value={email}
+                onChange={handleChange}
+              />
+            </div>
 
-        <div className={styles.mb3}>
-          <label htmlFor="phone">Phone</label>
-          <input
-            type="tel"
-            className={styles.input}
-            id="phone"
-            name="phone"
-            value={phone}
-            onChange={handleChange}
-          />
-        </div>
+            <div className={styles.mb3}>
+              <label htmlFor="phone">Phone</label>
+              <input
+                type="tel"
+                className={styles.input}
+                id="phone"
+                name="phone"
+                value={phone}
+                onChange={handleChange}
+              />
+            </div>
 
-        <div className={styles.mb3}>
-          <label htmlFor="desc">Description</label>
-          <textarea
-            className={styles.input}
-            placeholder="Description"
-            id="desc"
-            name="desc"
-            rows="4"
-            value={desc}
-            onChange={handleChange}
-          ></textarea>
-        </div>
+            <div className={styles.mb3}>
+              <label htmlFor="desc">Description</label>
+              <textarea
+                className={styles.input}
+                placeholder="Description"
+                id="desc"
+                name="desc"
+                rows="4"
+                value={desc}
+                onChange={handleChange}
+              ></textarea>
+            </div>
 
-        <button type="submit" className={styles.button}>
-          Submit
-        </button>
-      </form>
+            <button type="submit" className={styles.button} disabled={loading}>
+              {loading ? "Submitting..." : "Submit"} {/* Show loading text */}
+            </button>
+          </form>
+        </>
+      )}
     </div>
   );
 };

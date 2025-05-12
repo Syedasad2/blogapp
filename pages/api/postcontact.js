@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGO_URI;  // .env.local me URI rakhna
+const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri);
 
 export default async function handler(req, res) {
@@ -15,7 +15,6 @@ export default async function handler(req, res) {
 
       res.status(200).json({ message: "Contact saved successfully!", id: result.insertedId });
     } catch (error) {
-      console.error(error);
       res.status(500).json({ message: "Something went wrong!" });
     } finally {
       await client.close();
